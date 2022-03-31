@@ -5,3 +5,5 @@ class Creature(Resource):
         self.Genome = Genome
         self.Energy = Genome.Start_energy.Get_current()
     self.Resource_type = "Creature"
+    def Do(self):
+        

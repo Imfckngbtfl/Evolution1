@@ -5,6 +5,6 @@ class Gene:
     def Generate(self):
         self.Current = rand(self.Min, self.Max)
     def Mutate(self):
-        Generate()
+        self.Generate()
     def Get_current(self):
         return self.Current
