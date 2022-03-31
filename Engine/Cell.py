@@ -2,7 +2,7 @@ import Creature.py
 import Berry.py
 import Mineral.py
 class Cell():
-    def __init__(self, object = NULL, x, y):
+    def __init__(self, x, y, object = None):
         self.object = object
         self.x = x
         self.y = y
