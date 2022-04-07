@@ -5,7 +5,7 @@ class Creature(Resource):
 
     def __init__(self, genome):
         self.genome = genome
-        self.energy = genome.Start_energy.Get_current()
+        self.energy = genome.Start_energy.get_value()
     super().collide_type = 'Collide'
     resource_type = "Creature"
 
