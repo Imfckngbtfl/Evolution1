@@ -13,8 +13,18 @@ class MapController:
                 object = None
                 if filled_map_file[0] == '0':
                     object = Wall
-                unfilled_map.set_cell(object)
+                filled_map_file.pop(0)
+                unfilled_map.set_cell(i, j, object)
 
-    def draw_map(self, map):
-        # подаёт команду UI нарисовать карту
+    def draw_cell(self, x, y):
+        # подаёт команду UI нарисовать (обновить) клетку на данной координате
         pass
+
+    def draw_map(self, game_map):
+        for i in range(game_map.height + 1):
+            for j in range(game_map.width + 1):
+                cell = game_map[i][j]
+                if cell.is_update == 1:
+                    self.draw_cell(i, j)
+                    cell.update()
+
