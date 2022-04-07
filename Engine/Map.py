@@ -1,13 +1,21 @@
-import Cell.py
+import Cell
 import numpy as np
-class Map():
+
+
+class Map:
+
     def __init__(self, w, h):
-        self.w = w
-        self.h = h
-    def Generate(self):
+        self.width = w
+        self.height = h
         self.cells = []
-        for i in range(self.h):
+
+    def generate(self):
+        for i in range(self.height + 1):
             cell_row = []
-            for j in range(self.w):
-                cell_row.append(Cell(x,y))
+            for j in range(self.width + 1):
+                k = Cell.Cell([])
+                cell_row.append(k)
             self.cells.append(cell_row)
+
+    def set_cell(self, x, y, object):
+        self.cells[x][y].set_object(object)

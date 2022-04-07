@@ -1,12 +1,12 @@
-import Creature.py
-import Berry.py
-import Mineral.py
-class Cell():
-    def __init__(self, x, y, object = None):
-        self.object = object
-        self.x = x
-        self.y = y
-    def Set_object(self, object):
-        self.object = object
-    def Get_object(self):
-        return self.object
+class Cell:
+    def __init__(self, objects):
+        self.objects = objects
+
+    def set_object(self, object):
+        self.objects.append(object)
+
+    def get_object(self):
+        return self.objects
+
+    def remove_object(self, object):
+        self.objects.pop(object)

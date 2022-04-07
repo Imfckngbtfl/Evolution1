@@ -1,9 +1,18 @@
-import Resource.py
-import Genome.py
+import Resource
+
+
 class Creature(Resource):
-    def __init__(self, Genome):
-        self.Genome = Genome
-        self.Energy = Genome.Start_energy.Get_current()
-    self.Resource_type = "Creature"
-    def Do(self):
+
+    def __init__(self, genome):
+        self.genome = genome
+        self.energy = genome.Start_energy.Get_current()
+    super().collide_type = 'Collide'
+    resource_type = "Creature"
+
+    def play(self):
+        action, place = "Move", "f"  # затычка, чтобы работало
+        # обращается к нейронке и возвращает действие и клетку, к которой это действие применяется
+        return action, place
+
+
         
