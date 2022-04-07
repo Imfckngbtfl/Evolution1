@@ -1,5 +1,6 @@
-from Controllers import Game_controller
+from Controllers.Game_controller import GameController
 
 if __name__ == '__main__':
-    g = Game_controller.GameController()
-    g.start()
+    width, height = int(input())
+    g = GameController(width, height)
+    g.start('')
